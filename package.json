@@ -1,0 +1,19 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrlepak/restaurantTemplate.git"
+  },
+  "author": "Try",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrlepak/restaurantTemplate/issues"
+  },
+  "homepage": "https://github.com/mrlepak/restaurantTemplate#readme"
+}
