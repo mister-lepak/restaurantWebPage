@@ -10,3 +10,4 @@ This project is part of theodinproject.com exercise to enforce understanding on 
 - import export
 
 ## Where to view this project live?
+https://mrlepak.github.io/restaurantWebPage/
