@@ -1,0 +1,158 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(80, 85, 90);
+  margin: 0;
+	padding: 43px 0px;
+  display: grid;
+  grid-template-columns: 0.15fr 0.7fr 0.15fr;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "header header header"
+    ". content ."
+    ". footer ."
+    ;
+  background-color: #46a1de;
+}
+
+
+nav{
+  grid-area: navbar;
+  z-index: 9;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+#header {
+  grid-area: header;
+  margin: 0;
+
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/steak.jpg");
+
+  /* Set a specific height */
+  height: 350px;
+  /* width: 100%; */
+  /* Position and center the image to scale nicely on all screens */
+  background-attachment: fixed;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#content {
+  grid-area: content;
+  margin: auto;
+}
+
+#footer {
+  grid-area: footer;
+  margin: auto;
+  color: white;
+}
+
+.bg-color{
+  background-color: #46a1de;
+  transition-duration: .5s;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  /* min-width: 600px; */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tabs{
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+.tabs > li {
+  transition-duration: .25s;
+  display: table-cell;
+  list-style: none;
+  text-align: center;
+  padding: 20px 20px 25px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+
+}
+.tabs > li:before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,.3);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition-duration: .25s;
+  border-radius: 5px 5px 0 0;
+}
+
+.tabs > li:hover:before{
+  -webkit-transform: translateY(70%);
+  transform: translateY(70%);
+}
+
+.tabs > li.active{
+  color: rgba(80,85,90);
+}
+
+.tabs > li.active:before{
+  transition-duration: .5s;
+  background-color: white;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.tab__content{
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.tab__content >li{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  list-style: none;
+}
+
+.tab__content >li .content__wrapper {
+  text-align: center;
+  border-radius: 5px;
+
+  padding: 45px 40px 40px 40px;
+  background-color: white;
+}
+
+
